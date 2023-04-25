@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hackathon Home Page</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1><a href="index.html">DEI Work in the Tech World Conference</a></h1>
+		<nav>
+			<ul>
+				<li><a href="about.html">About</a></li>
+				<li><a href="schedule.html">Schedule</a></li>
+				<li><a href="social.html">Social Activities</a></li>
+				<li><a href="presenter.html">Presenter Instructions</a></li>
+				<li><a href="policy.html">Event Policies</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section>
+			<h2>Register</h2>
+            <br>
+			<form action="thank-you.html" method="post">
+				<div>
+					<label for="name">Name in Use:</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+				<div>
+					<label for="pronouns">Pronouns:</label>
+					<input type="text" id="pronouns" name="pronouns" required>
+				</div>
+				<div>
+					<label for="email">Email Address:</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<div>
+					<label>Presenter or Attendee:</label>
+					<input type="checkbox" id="presenter" name="role" value="presenter">
+					<label for="presenter">Presenter</label>
+					<input type="checkbox" id="attendee" name="role" value="attendee">
+					<label for="attendee">Attendee</label>
+				</div>
+				<div>
+					<label for="dietary">Dietary Restrictions:</label>
+					<input type="text" id="dietary" name="dietary" required>
+				</div>
+				<div>
+					<label for="accommodations">Accommodations:</label>
+					<input type="text" id="accommodations" name="accommodations" required>
+				</div>
+				<div id="presenter-fields" style="display: none;">
+					<div>
+						<label for="title">Title of Presentation:</label>
+						<input type="text" id="title" name="title">
+					</div>
+					<div>
+						<label for="description">Description:</label>
+						<textarea id="description" name="description"></textarea>
+					</div>
+				</div>
+                <div>
+                    <label for="questions">Do you have any questions for the presenters before the presenters’ Q&A session?</label>
+                    <textarea id="questions" name="questions"></textarea>
+                </div>
+				<div>
+					<label for="notes">Anything we should know about:</label>
+					<textarea id="notes" name="notes"></textarea>
+				</div>
+                <br>
+				<button type="submit">Submit</button>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>Copyright © 2023 DEI Work in the Tech World Conference</p>
+	</footer>
+
+	<script>
+		var presenterFields = document.getElementById('presenter-fields');
+		var presenterCheckbox = document.getElementById('presenter');
+        var attendeeCheckbox = document.getElementById('attendee');
+
+        presenterCheckbox.addEventListener('change', function() {
+        if (presenterCheckbox.checked) {
+            presenterFields.style.display = 'block';
+        } else {
+            presenterFields.style.display = 'none';
+        }
+        });
+
+        attendeeCheckbox.addEventListener('change', function() {
+            if (attendeeCheckbox.checked) {
+                presenterFields.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+
