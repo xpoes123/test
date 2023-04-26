@@ -5,6 +5,98 @@
 	<title>Hackathon Home Page</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+<style>
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.main-agileinfo {
+  width: 40%;
+  margin: 3em auto;
+  background: rgba(0, 0, 0, 0.18);
+  background-size: cover;
+}
+
+span{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  color:#333
+}
+
+.agileits-top {
+  padding: 3em;
+}
+
+input[type="text"], input[type="text"],input[type="email"], input[type="password"] {
+  font-size: 0.9em;
+  color: #fff;
+  font-weight: 100;
+  width: 94.5%;
+  display: block;
+  border: none;
+  padding: 0.8em;
+  border: solid 1px rgba(255, 255, 255, 0.37);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
+  background-position: -800px 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: #333;
+}
+
+input.email, input.text {
+  margin: 2em 0;
+}
+input.text, input.text {
+  margin: 2em 0;
+}
+
+.text:focus, .text:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+
+::-webkit-input-placeholder {
+  color: #333;
+  font-weight: 100;
+}
+
+:-ms-input-placeholder {
+  color: #333;
+}
+
+input[type="submit"] {
+  font-size: .9em;
+  color: #fff;
+  background: #4E5153;
+  outline: none;
+  border: 1px solid #333;
+  cursor: pointer;
+  padding: 0.9em;
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 2em 0;
+  letter-spacing: 4px;
+}
+
+input[type="submit"]:hover {
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  -ms-transition: .3s all;
+  transition: .3s all;
+  background: #AEB1B3;
+}
+
+.attendee{
+	text-align: left;
+}
+</style>
 <body>
 	<header>
 		<h1><a href="index.html">DEI Work in the Tech World Conference</a></h1>
@@ -15,64 +107,39 @@
 				<li><a href="social.html">Social Activities</a></li>
 				<li><a href="presenter.html">Presenter Instructions</a></li>
 				<li><a href="policy.html">Event Policies</a></li>
+				<li><a href="register.html">Register</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
 		<section>
-			<h2>Register</h2>
-            <br>
-			<form action="thank-you.html" method="post">
-				<div>
-					<label for="name">Name in Use:</label>
-					<input type="text" id="name" name="name" required>
-				</div>
-				<div>
-					<label for="pronouns">Pronouns:</label>
-					<input type="text" id="pronouns" name="pronouns" required>
-				</div>
-				<div>
-					<label for="email">Email Address:</label>
-					<input type="email" id="email" name="email" required>
-				</div>
-				<div>
-					<label>Presenter or Attendee:</label>
-					<input type="checkbox" id="presenter" name="role" value="presenter">
-					<label for="presenter">Presenter</label>
-					<input type="checkbox" id="attendee" name="role" value="attendee">
-					<label for="attendee">Attendee</label>
-				</div>
-				<div>
-					<label for="dietary">Dietary Restrictions:</label>
-					<input type="text" id="dietary" name="dietary" required>
-				</div>
-				<div>
-					<label for="accommodations">Accommodations:</label>
-					<input type="text" id="accommodations" name="accommodations" required>
-				</div>
-				<div id="presenter-fields" style="display: none;">
-					<div>
-						<label for="title">Title of Presentation:</label>
-						<input type="text" id="title" name="title">
-					</div>
-					<div>
-						<label for="description">Description:</label>
-						<textarea id="description" name="description"></textarea>
+			<div class="main wrapper">
+				<h1>Conference Signup</h1>
+				<div class="main-agileinfo">
+					<div class="agileits-top">
+						<form action="#" method="post">
+							<input class="text" type="text" name="Name In Use" placeholder="Name In Use" required="">
+							<input class="text" type="text" name="pronoun" placeholder="Pronouns" required="">
+							<input class="text email" type="email" name="email" placeholder="Email" required="">
+							<input type="checkbox" id="presenter" name="role" value="presenter">
+							<label for="presenter">Presenter</label>
+							<input type="checkbox" id="attendee" name="role" value="attendee">
+							<label for="attendee">Attendee</label>
+							<div id="presenter-fields" style="display: none;">
+								<div>
+									<input class="text" type="text" name="Title of Presentation" placeholder="Title of Presentation" required="">
+								</div>
+								<div>
+									<input class="text" type="text" name="Description" placeholder="Description" required="">
+								</div>
+							</div>
+							<input class="text" type="text" name="Dietary Restrictions" placeholder="Dietary Restrictions" required="">
+							<input class="text" type="text" name="Accommodations" placeholder="Accommodations" required="">
+							<input type="submit" value="SIGNUP">
+						</form>
 					</div>
 				</div>
-                <div>
-                    <label for="questions">Do you have any questions for the presenters before the presenters’ Q&A session?</label>
-                    <textarea id="questions" name="questions"></textarea>
-                </div>
-				<div>
-					<label for="notes">Anything we should know about:</label>
-					<textarea id="notes" name="notes"></textarea>
-				</div>
-                <br>
-				<button type="submit">Submit</button>
-			</form>
-		</section>
 	</main>
 
 	<footer>
